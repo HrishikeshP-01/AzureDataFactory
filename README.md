@@ -42,3 +42,21 @@ Each pipeline run has a unique pipeline ID
 #### A pipeline can be triggered in 2 ways:
 1. *On-demand execution* – With a button click in the UI we can manually force the immediate creation & execution of a new pipeline. This is done either for one-off pipelines or for debugging purposes.
 2. *Triggered execution* – a new pipeline run is created & executed each time a trigger is fired.
+
+## ADF Trigger types
+1. *Schedule* – Set a calendar time trigger
+2. *Tumbling Window* – For precise time frame triggers
+3. *Storage event* – Triggering based on BLOB storage events
+4. *Custom event* – Trigger based on any custom event or services or applications might generate
+
+## Schedule Trigger
+- Recurrence schedule. Eg: Trigger a run every 4 hrs
+- **Fire & forget trigger** – It doesn’t track pipeline run success or failure. It simply starts the run & then moves on.
+- Will only trigger pipeline run for times after it started running. It doesn’t run pipelines for past events. Eg:- if we create a schedule trigger for a pipeline to run every day, it’s only going to run from the day you activate the trigger & days moving forward. It will never run for the days preceding the activation time. 
+If the trigger is disabled for a week **it won’t backfill** that week even after activation.
+- They are unreliable. They are **not precise** & can’t be relied on for operations that require high accuracy in time. 
+
+Eg:- A scheduled trigger at 2AM will most probably run around 2. It could even be 2:10 when it runs.
+
+- It has a **many-to-many relationship with the pipelines** it can run. One schedule trigger can run multiple pipelines. Multiple pipelines can run 1 trigger.
+- Schedule triggers **have no retry logic** as they are fire & forget triggers.
