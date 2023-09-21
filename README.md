@@ -25,3 +25,20 @@ We use ADF to extract, transform & load data to say Azure SQL which is then used
 - *Datasets* – The data used in your activities. They represent the data structures within data stores that point to/reference the data you want to use.
 - *ADF Triggers* – Allows us to define when data pipelines run in ADF
 
+## Different tools to work with ADF:
+- Azure Portal
+- Azure PowerShell
+- .NET
+- Python
+- REST
+- Resource Manager Template (Azure PowerShell Az Module) – They are json files with pre-defined values that are used to create ADF
+
+## Data pipelines & pipeline runs
+*A trigger fires a pipeline run.*
+
+*Pipeline run* – a single execution of a pipeline. A single batch of values are loaded from the source, transformed as needed and then stored in a target/sink data source
+
+Each pipeline run has a unique pipeline ID
+#### A pipeline can be triggered in 2 ways:
+1. *On-demand execution* – With a button click in the UI we can manually force the immediate creation & execution of a new pipeline. This is done either for one-off pipelines or for debugging purposes.
+2. *Triggered execution* – a new pipeline run is created & executed each time a trigger is fired.
