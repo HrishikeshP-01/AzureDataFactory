@@ -99,5 +99,13 @@ Eg: Adding a col to the dataset on the fly.
 
 **ADF allows schema drift by default** but you can configure it to strictly adhere to the initial schema.
 
+## Optimizing pipelines in ADF pipelines 
+- To specify which step runs first set the Work Order. Lower the work order higher the priority.
+- If you set **logging level** to **Verbose** it’s going to **affect performance**. Verbose is good for debugging. But in a production environment set the logging level to Basic/None.
+- Under sink properties if you check the run in parallel option, any grouped sinks would run in parallel.
+- To view the performance of an activity go to Monitor window > pipeline runs > Select pipeline > Select activity run’s view details button (glasses icon). This will give us all performance details of the activity.
+-Partition chart shows you how many rows were calculated in each partition.
+
+*Sink processing time* – how long it took the sink to run.
 
 
