@@ -80,4 +80,17 @@ Eg: If a tumbling window was disabled for a week & re-enabled, it can backfill t
 - It **can filter by blob path**. So instead of monitoring all blobs in a container, it can monitor only a subset (i.e., given path) if needed.
 - It’s ideal in a situation where data that comes into the system is stored in BLOB storage. You don’t want to pull for changes in the BLOB storage. Instead, the trigger is fired automatically when BLOB is created or removed.
 
+## Custom event trigger
+- Triggers based on events
+- Not limited to BLOB events in a storage account. 
+- It **monitors/listens to an event grid** which can be configured to handle any custom event that your services or applications may generate
+- **Filters events by subject** which allows us to make triggers listen to only a subset of events.
+- This trigger is great if they pipeline needs to run based on more sophisticated events.
+
+Eg: A trigger can run a new pipeline run based on the status of another pipeline run.
+
+## Create a trigger in ADF:
+Trigger>Add/Create> Once you make the trigger go back & click on the publish button to publish the trigger & activate it
+
+
 
