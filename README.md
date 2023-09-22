@@ -92,5 +92,12 @@ Eg: A trigger can run a new pipeline run based on the status of another pipeline
 ## Create a trigger in ADF:
 Trigger>Add/Create> Once you make the trigger go back & click on the publish button to publish the trigger & activate it
 
+## Handling Schema drift in Data Flow
+*Schema drift* – the ability of your data flow to automatically add changes to data schema on the fly
+
+Eg: Adding a col to the dataset on the fly.
+
+**ADF allows schema drift by default** but you can configure it to strictly adhere to the initial schema.
+
 
 
