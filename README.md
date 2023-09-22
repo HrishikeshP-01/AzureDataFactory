@@ -60,3 +60,16 @@ Eg:- A scheduled trigger at 2AM will most probably run around 2. It could even b
 
 - It has a **many-to-many relationship with the pipelines** it can run. One schedule trigger can run multiple pipelines. Multiple pipelines can run 1 trigger.
 - Schedule triggers **have no retry logic** as they are fire & forget triggers.
+
+## Tumbling window trigger
+- Tumbling window is **on a recurrence schedule**. Eg: You can configure it to run every day at a given time
+- Schedule for a tumbling window trigger defines time windows. A pipeline run can accept the start & end time of time window as inputs
+- Time windows **do not overlap**
+- Tumbling windows **maintains state**. They can keep track of which time windows have been processed and their success or failure status.
+- It **allows backfill** of historical time windows.
+
+Eg: If a tumbling window was disabled for a week & re-enabled, it can backfill the week that was missed by triggering for all of the time frames for that week.
+
+- It is a **100% reliable & accurate** in how it manages time limits
+- It can **automatically retry** time windows in case of failure.
+- They are ideal for pipelines that are very time-sensitive & need reliability in runs.
