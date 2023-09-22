@@ -73,3 +73,11 @@ Eg: If a tumbling window was disabled for a week & re-enabled, it can backfill t
 - It is a **100% reliable & accurate** in how it manages time limits
 - It can **automatically retry** time windows in case of failure.
 - They are ideal for pipelines that are very time-sensitive & need reliability in runs.
+
+## Storage Event Triggers
+- Monitors a storage account container & the idea is that pipeline runs are triggered based on changes in the container.
+- It can fire whenever a blob is created/destroyed.
+- It **can filter by blob path**. So instead of monitoring all blobs in a container, it can monitor only a subset (i.e., given path) if needed.
+- It’s ideal in a situation where data that comes into the system is stored in BLOB storage. You don’t want to pull for changes in the BLOB storage. Instead, the trigger is fired automatically when BLOB is created or removed.
+
+
