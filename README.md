@@ -108,4 +108,8 @@ Eg: Adding a col to the dataset on the fly.
 
 *Sink processing time* – how long it took the sink to run.
 
+## Types of activities:
+1. Data movement activities – moving data from one location to another
+2. Data transformation activities – change nature/schema of data
+3. Control flow activities – defines the sequence of execution of pipeline
 
