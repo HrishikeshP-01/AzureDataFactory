@@ -116,4 +116,9 @@ Eg: Adding a col to the dataset on the fly.
 ## Upsert with Azure SQL
 *Upsert* – Upsert operation allows the insertion & updating of records in a SQL table at the same time. It allows both update operation as well as insert operation.
 
+## Troubleshooting in Azure Stream Analytics
+- When a stream analytics job suddenly stops **resource logs give us a place to start**.
+- *Activity logs* – tells us what’s happening with a stream analytics instance
+- To  customize what kind of logs you need go to Diagnostic setting
+- *Log analytics workspace* – logs are collected & stored
 
