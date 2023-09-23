@@ -113,3 +113,7 @@ Eg: Adding a col to the dataset on the fly.
 2. Data transformation activities – change nature/schema of data
 3. Control flow activities – defines the sequence of execution of pipeline
 
+## Upsert with Azure SQL
+*Upsert* – Upsert operation allows the insertion & updating of records in a SQL table at the same time. It allows both update operation as well as insert operation.
+
+
